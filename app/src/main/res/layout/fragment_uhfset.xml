@@ -1,0 +1,521 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.uhf_bt.fragment.UHFSetFragment">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvFrequencyBand"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/SpinnerMode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:entries="@array/arrayMode"
+                    android:gravity="center_horizontal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="5dp">
+
+                <Button
+                    android:id="@+id/BtSetFre"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/btSetFre"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/BtGetFre"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:text="@string/btGetFre"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llFreHop"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="5dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tvFreHop" />
+
+                    <Spinner
+                        android:id="@+id/spFreHop"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:entries="@array/arrayFreHop_us" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnSetFreHop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btSetFreHop" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/uhf_title_power"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/spPower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:entries="@array/arrayPower"
+                    android:gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/uhf_title_dbm" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="5dp">
+
+                <Button
+                    android:id="@+id/btnSetPower"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/uhf_btn_setpower"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btnGetPower"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:text="@string/uhf_btn_getpower"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvProtocol"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/spProtocol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:entries="@array/arrayProtocol"
+                    android:gravity="center_horizontal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="5dp"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btnSetProtocol"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/btSetProtocol"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btnGetProtocol"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:text="@string/btGetProtocol"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="10dp"
+                android:text="@string/title_buzzer"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="5dp">
+
+                <Button
+                    android:id="@+id/btnbeepOpen"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/title_buzzer_open"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btnbeepClose"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:text="@string/title_buzzer_close"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/uhf_btn_memoryBank" />
+
+                <Spinner
+                    android:id="@+id/spMemoryBank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:entries="@array/arrayMemoryBank" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llMemoryBankParam"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Offset: "
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/etOffset"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:text="0" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/word" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Length:"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/etLength"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:text="6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/word" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="5dp">
+
+                <Button
+                    android:id="@+id/btnSetInventoryBank"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/set"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btnGetInventoryBank"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:text="@string/get"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!--session-->
+            <LinearLayout
+                android:id="@+id/llSession"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Session ID:"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/spSessionID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:entries="@array/arraySession" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Target:"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/spInventoried"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:entries="@array/arrayInventoried" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="5dp">
+
+                <Button
+                    android:id="@+id/btnSetGen2"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/set"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btnGetGen2"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:text="@string/get"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <!-- Link-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/uhf_title_link"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/splinkParams"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:entries="@array/arrayLink" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <Button
+                    android:id="@+id/btnSetRFlink"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/set_link"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btnGetRFlink"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:text="@string/get_link"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- fast inventory-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbFastInventoryOpen"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Fast Inventory Open" />
+
+                    <RadioButton
+                        android:id="@+id/rbFastInventoryClose"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Fast Inventory Close" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="5dp">
+
+                <Button
+                    android:id="@+id/btnSetFastInventory"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/set"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btnGetFastInventory"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:text="@string/get"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnFactoryReset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="5dp"
+                android:text="@string/factory_reset"
+                android:textAllCaps="false"
+                android:textColor="@color/red2"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/cbShowDuplicateTags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:showText="true"
+                android:text="@string/ShowDuplicateTags"
+                android:visibility="visible" />
+
+            <CheckBox
+                android:id="@+id/cbContinuousWave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:showText="true"
+                android:text="@string/continuous_wave"
+                android:visibility="visible" />
+
+            <CheckBox
+                android:id="@+id/cbAutoReconnect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/autoReconnect"
+                android:visibility="visible" />
+
+            <CheckBox
+                android:id="@+id/cbTagFocus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="TagFocus Mode" />
+
+            <CheckBox
+                android:id="@+id/cbRssi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/support_rssi" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</FrameLayout>

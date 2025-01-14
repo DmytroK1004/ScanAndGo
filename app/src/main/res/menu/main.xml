@@ -1,0 +1,50 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <item
+        android:id="@+id/UHF_Battery"
+        android:title="@string/obtain_electricity"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/UHF_T"
+        android:title="@string/module_temperature"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/UHF_ver"
+        android:title="@string/action_uhf_ver"
+        app:showAsAction="never" />
+
+
+    <item
+        android:id="@+id/Mainboard_ver"
+        android:title="@string/action_Mainboard_ver"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/Ex10SDKFirmware_ver"
+        android:title="@string/action_Ex10SDKFirmware_ver"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/ble_ver"
+        android:title="@string/action_ble_ver"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/ble_disconnectTime"
+        android:title="@string/disconnectTime"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/exportData"
+        android:title="@string/exportData"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/r2_extract_data"
+        android:title="@string/R2_extract_data"
+        app:showAsAction="never" />
+</menu>

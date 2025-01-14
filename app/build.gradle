@@ -1,0 +1,79 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.uhf_bt'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.uhf_bt"
+//        applicationId "com.uhf.ble"
+        minSdk 27
+        targetSdk 34
+        versionCode 5
+        versionName "2.1.0.1"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        debug {
+            File strFile = new File("/uhf-ble_release.jks")
+            storeFile file(strFile)
+            storePassword "123456"
+            keyPassword "123456"
+            keyAlias "key0"
+        }
+        release {
+            File strFile = new File("/uhf-ble_release.jks")
+            storeFile file(strFile)
+            storePassword "123456"
+            keyPassword "123456"
+            keyAlias "key0"
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        // 自定义apk名称
+        android.applicationVariants.all { variant ->
+            variant.outputs.all {
+                def signingConfigName = variant.buildType.signingConfig.name
+                outputFileName = "UHF-ble_v${defaultConfig.versionName}_${signingConfigName}.apk"
+            }
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors  in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')// 蓝牙固件升级
+    implementation('no.nordicsemi.android:dfu:1.9.0') {
+        exclude group: 'com.android.support'
+    }
+
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+}
