@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_shortcut"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:background="@color/background_color"
+    tools:context="com.example.uhf_bt.CheckActivity">
+
+    <!-- Shortcut Name -->
+    <TextView
+        android:id="@+id/shortCutName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:paddingBottom="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/title_color"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:text="Shortcut Name" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Right Location Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:background="@color/section_background">
+
+            <Button
+                android:id="@+id/btnCheckRightLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#64EB8A"
+                android:textColor="@color/white"
+                android:text="In the Right Location"
+                android:textSize="12sp"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/txtRightCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/text_color"
+                android:textSize="14sp"
+                android:text="Right Count" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/rightItems"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/list_background_right" />
+
+        <!-- Wrong Location Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:background="@color/section_background">
+
+            <Button
+                android:id="@+id/btnCheckWrongLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FAB2B2"
+                android:padding="8dp"
+                android:text="In the Wrong Location"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txtWrongCount"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:text="Wrong Count"
+                android:textColor="@color/text_color"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btn_fix_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/secondary_button_color"
+                android:onClick="onFixWrongLocation"
+                android:padding="8dp"
+                android:text="Fix"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/wrongItems"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/list_background_wrong" />
+
+        <!-- Missing Location Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:background="@color/section_background">
+
+            <Button
+                android:id="@+id/btnCheckMissingLocation"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#CCCCCC"
+                android:padding="8dp"
+                android:text="Missing in the Location"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txtMissingCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/text_color"
+                android:textSize="14sp"
+                android:text="Missing Count" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/missingItems"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/list_background_missing" />
+
+        <!-- Unknown Location Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:background="@color/section_background">
+
+            <Button
+                android:id="@+id/btnCheckUnknownLocation"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#006ED3"
+                android:padding="8dp"
+                android:text="Unknown from Database"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txtUnknownCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:text="Unknown Count"
+                android:textColor="@color/text_color"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnAddMissing"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/secondary_button_color"
+                android:textColor="@color/white"
+                android:text="Add"
+                android:textSize="12sp"
+                android:padding="8dp" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/unknownItems"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/list_background_unknown" />
+
+    </LinearLayout>
+
+</LinearLayout>

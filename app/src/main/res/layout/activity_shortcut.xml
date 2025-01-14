@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_shortcut"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    tools:context="com.example.uhf_bt.ShortCutActivity">
+
+    <!-- Shortcut Input -->
+    <Button
+        android:id="@+id/btnLogOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:onClick="OnLogOut"
+        android:backgroundTint="@color/colorAccent"
+        android:text="Log Out"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/section_background">
+
+        <EditText
+            android:id="@+id/etShortcut"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:hint="Input the shortcut"
+            android:padding="8dp"
+            android:background="@drawable/edittext_background"
+            android:inputType="text"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/goShortCut"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onGoShortCut"
+            android:backgroundTint="@color/button_color"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="Go" />
+    </LinearLayout>
+
+    <!-- Building Input -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:background="@color/section_background">
+
+        <EditText
+            android:id="@+id/etBuildingName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:hint="Building Name"
+            android:padding="8dp"
+            android:background="@drawable/edittext_background"
+            android:inputType="textPersonName"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnUpdateBuilding"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="OnUpdateBuilding"
+            android:backgroundTint="@color/secondary_button_color"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:text="Update" />
+
+        <Button
+            android:id="@+id/btnAddBuilding"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="OnAddBuilding"
+            android:backgroundTint="@color/button_color"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:text="Add" />
+    </LinearLayout>
+
+    <!-- Building List -->
+    <ListView
+        android:id="@+id/listBuildings"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:divider="@color/list_divider"
+        android:dividerHeight="1dp"
+        android:background="@color/list_background" />
+</LinearLayout>

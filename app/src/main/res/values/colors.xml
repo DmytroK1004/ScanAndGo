@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
@@ -35,10 +40,20 @@
     <color name="grayslate">#708090</color>
     <color name="lightblue">#0083FF</color>
     <color name="lightblue1">#77AAFF</color>
-    <color name="lightblue3">#99BBFF</color>
     <color name="lightblue2">#CCCCCC</color>
+    <color name="lightblue3">#99BBFF</color>
+    <color name="label_color">#333333</color>
+    <color name="subtitle_color">#757575</color>
     <color name="full_transparent">#00000000</color>
     <color name="half_transparent">#aa000000</color>
+    <color name="background_color">#F5F5F5</color>
+    <color name="title_color">#333333</color>
+    <color name="text_color">#666666</color>
+    <color name="button_color">#6200EE</color>
+    <color name="list_background_color">#FFFFFF</color>
+    <color name="list_divider_color">#DDDDDD</color>
+    <color name="spinner_background_color">#EEEEEE</color>
+    <color name="spinner_popup_background">#FFFFFF</color>
 
     <color name="listitem_black">#ff000000</color>
     <color name="listitem_gray">#ff9da19e</color>
@@ -77,8 +92,14 @@
     <color name="viewfinder_frame">#ff000000</color>
     <color name="viewfinder_laser">#ffff0000</color>
     <color name="viewfinder_mask">#60000000</color>
-
-    <!--zxing end-->
+    <color name="list_background_right">#E8F5E9</color>
+    <color name="list_background_wrong">#FFEBEE</color>
+    <color name="list_background_missing">#E0E0E0</color>
+    <color name="list_background_unknown">#BBDEFB</color>
+    <color name="secondary_button_color">#03DAC5</color>
+    <color name="list_background">#FFFFFF</color>
+    <color name="list_divider">#DDDDDD</color>
+    <color name="section_background">#E8EAF6</color>
 
     <string-array name="colors" translatable="false">
         <item>#99cc00</item>

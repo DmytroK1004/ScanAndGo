@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_shortcut_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    tools:context="com.example.uhf_bt.CheckItemActivity">
+
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/title_color"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="" />
+
+    <!-- Horizontal Layout for Name and Back Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/shortCutName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textColor="@color/text_color"
+            android:fontFamily="sans-serif"
+            android:padding="8dp"
+            android:text="Shortcut Name"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/button_color"
+            android:textColor="@color/white"
+            android:text="Back"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <!-- Dropdown for Category Selection -->
+    <Spinner
+        android:id="@+id/categorySelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/spinner_background_color"
+        android:padding="12dp"
+        android:popupBackground="@color/spinner_popup_background" />
+
+    <!-- Dropdown for Item Selection -->
+    <Spinner
+        android:id="@+id/itemSelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/spinner_background_color"
+        android:padding="12dp"
+        android:popupBackground="@color/spinner_popup_background" />
+
+    <!-- Add Inventory Button -->
+    <Button
+        android:id="@+id/btnAddInventory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/button_color"
+        android:textColor="@color/white"
+        android:text="Add Item"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="18sp"
+        android:padding="12dp" />
+
+    <!-- List Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@color/list_background_color"
+        android:padding="8dp">
+
+        <ListView
+            android:id="@+id/listCheckItems"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/list_divider_color"
+            android:dividerHeight="1dp"
+            android:background="@color/list_background_color" />
+    </LinearLayout>
+
+</LinearLayout>

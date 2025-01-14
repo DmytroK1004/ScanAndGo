@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_board_building"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    tools:context="com.example.uhf_bt.BoardBuildingActivity">
+
+    <Button
+        android:id="@+id/btnLogOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log Out"
+        android:layout_gravity="end"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/colorAccent"
+        android:textSize="16sp"
+        android:onClick="btnLogOut" />
+
+    <TextView
+        android:id="@+id/tvLocationBuilding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Building"
+        android:textSize="16sp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/title_color"
+        android:gravity="left"
+        android:fontFamily="sans-serif-medium" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp"
+        android:background="@color/section_background"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/etAreaName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:hint="Enter Area Name"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:background="@drawable/edittext_background" />
+
+        <Button
+            android:id="@+id/btnUpdateArea"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/secondary_button_color"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:onClick="OnUpdateArea"
+            android:text="Update" />
+
+        <Button
+            android:id="@+id/btnAddArea"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:onClick="OnAddArea"
+            android:text="Add" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listBuildings"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@color/list_divider"
+        android:dividerHeight="1dp"
+        android:background="@color/list_background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:background="@color/section_background" />
+</LinearLayout>

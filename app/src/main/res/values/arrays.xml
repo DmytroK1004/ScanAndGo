@@ -111,5 +111,6 @@
     <string-array name="arrayInventoried">
         <item>A</item>
         <item>B</item>
+        <item>AB</item>
     </string-array>
 </resources>

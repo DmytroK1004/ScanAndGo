@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_floor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    tools:context="com.example.uhf_bt.BoardFloorActivity">
+
+    <!-- Log Out Button Styled Like Add Button -->
+    <Button
+        android:id="@+id/btnLogOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:backgroundTint="@color/colorAccent"
+        android:onClick="btnLogOut"
+        android:text="Log Out"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <!-- Location TextView -->
+    <TextView
+        android:id="@+id/tvLocationFloor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Floor Location"
+        android:textSize="16sp"
+        android:padding="4dp"
+        android:textColor="@android:color/black"
+        android:gravity="left"
+        android:fontFamily="sans-serif-medium" />
+
+    <!-- Floor Input and Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp"
+        android:padding="8dp"
+        android:background="@color/section_background"
+        android:gravity="center_vertical">
+
+        <!-- Floor Name Input (Increased length) -->
+        <EditText
+            android:id="@+id/etDetailLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:hint="Enter Detail Location"
+            android:padding="12dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:background="@drawable/edittext_background"
+            android:inputType="textPersonName" />
+
+        <!-- Update Button -->
+        <Button
+            android:id="@+id/btnUpdateDetailLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/secondary_button_color"
+            android:text="Update"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:onClick="OnUpdateDetailLocation" />
+
+        <!-- Add Button -->
+        <Button
+            android:id="@+id/btnAddDetailLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:text="Add"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:onClick="OnAddDetailLocation" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listDetailLocations"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:background="@android:color/white" />
+
+</LinearLayout>

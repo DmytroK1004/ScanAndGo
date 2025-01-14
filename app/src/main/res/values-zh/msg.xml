@@ -72,5 +72,4 @@
     <string name="uhf_msg_filter_data_nohex">过滤数据必须为十六进制数据</string>
     <string name="uhf_msg_filter_data_not_match">过滤数据和长度参数不匹配</string>
 
-
 </resources>
